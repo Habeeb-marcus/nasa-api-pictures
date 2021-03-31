@@ -1,49 +1,57 @@
- <!DOCTYPE html>
- <html lang="en">
- <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>NASA API Pictures</title>
-   <!-- Favicon -->
-   <link rel="icon" type="image/png" href="https://www.google.com/s2/favicons?domain=www.nasa.gov">
-   <!-- Font Awesome -->
-   <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
-  
-   <link rel="stylesheet" href="style.css">
- </head>
- <body>
-  <!-- loader -->
-  <div class="loader hidden">
-    <img src="rocket-1.svg" alt="Rocket Loading Animation">
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NASA API Pictures</title>
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://www.google.com/s2/favicons?domain=www.nasa.gov"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
 
-  <!-- container -->
-  <div class="container">
-
-    <!-- navigation -->
-    <div class="navigation-container">
-      <span class="background" ></span>
-      <!-- Result -->
-      <span class="navigation-items" id="resultsNav">
-        <h3 class="clickable">Favourites</h3>
-        <h3>&nbsp;&nbsp&nbsp•&nbsp&nbsp&nbsp </h3>
-        <h3 class="clickable">Load More</h3>
-      </span>
-      <!-- Favourites Nav -->
-      <span class="navigation-items hidden" id="favouritesNav">
-        <h3 class="clickable">Load More Nasa Images</h3>
-      </span>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- loader -->
+    <div class="loader hidden">
+      <img src="rocket-1.svg" alt="Rocket Loading Animation" />
     </div>
 
-    <!-- images container -->
-    <div class="images-container"></div>
-  </div>
-  
-  <!-- Save Confirmation -->
-  <div class="save-confirmed" hidden>
-    <h1>ADDED!</h1>
-  </div>
-   <!-- Scripts -->
-   <script src="scripts.js"></script>
- </body>
- </html>
+    <!-- container -->
+    <div class="container">
+      <!-- navigation -->
+      <div class="navigation-container">
+        <span class="background"></span>
+        <!-- Result  Nav-->
+        <span class="navigation-items " id="resultsNav">
+          <h3 class="clickable" onclick="updateDOM('favorites')">Favourites</h3>
+          <h3>&nbsp;&nbsp&nbsp•&nbsp&nbsp&nbsp</h3>
+          <h3 class="clickable" onclick="getNasaPictures()">Load More</h3>
+        </span>
+        <!-- Favourites Nav -->
+        <span class="navigation-items hidden" id="favoritesNav">
+          <h3 class="clickable" onclick="getNasaPictures()">
+            Load More NASA Images
+          </h3>
+        </span>
+      </div>
+
+      <!-- images container -->
+      <div class="images-container"></div>
+    </div>
+
+    <!-- Save Confirmation -->
+    <div class="save-confirmed" hidden>
+      <h1>ADDED!</h1>
+    </div>
+    <!-- Scripts -->
+    <script src="scripts.js"></script>
+  </body>
+</html>
